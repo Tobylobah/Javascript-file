@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript-03</title>
+</head>
+<body>
+  I learnt about strings (the best part so far), ways to create strings using single quote and double quote
+  I learnt about Concatenation , combining two or more strings together.
+  I learnt about "type of" , used to know if a particulat term is a boolean , number or  a string.
+  <!---try it in your console-->
+  I learnt about escape characters eg /' to create a single quote , /" to create a double quote and /n to create a newline character.
+  I learnt about template strings , it allows us to insert a value directly into a string(This is called interpolation) , it also allows us to create multiple line strings.
+  have you ever worked with button onclick attribute?
+  <button onclick="alert('wowww , nice')";>Click me hooughs</button>
+</body>
+<script>
+  console.log("Hello" + " World");//concatenation
+  // okay so take note of this:
+  console.log('$' + 2 + 4);
+  //ans:24
+  console.log('$' + (2+4));
+  //ans:6
+  //Brackets are very important when dealing with numbers in Js.
+  //Lets have something about floats.
+  console.log(20.95+7.99);
+  //ans:28.939999999999998
+  console.log((2095+799)/100);
+  //ans:28.94
+  //floats inaccuracies.
+  //ESCAPE CHARACTERS
+ ///wrong console.log('I'm learning Javascript');
+          console.log("I\'m learning Javascript");//its a backward slash
+          console.log("I'm learning JS");
+ ///wrong console.log('I'm learning Javascript');
+          console.log('I\"m learning Javascript');//its a backward slash
+          console.log('I"m learning JS');
+  console.log('some\ntext'); //it will display these two words in separate line , its like the br tag in html.
+  //Lets Interpolatee ahahahahhaahha
+  console.log(`Items in the cart are just ${ 10+70+4} in total and it costs $${700+500+40}`);
+  console.log(`What i will like to eat:
+                Rice
+                beans
+                spagh
+                indomie`);
+  //challenge exercises solution
+  console.log('Total cost: $' + (599+295)/100);
+  console.log(`Total cost: $${(599+295/100)}`);
+  alert(`Total cost: $8.94
+  Thank you , come again`);
+  console.log(`Estimated tax (10%): $${Math.round(10/100 * 6786/100)}`);
+</script>
+</html>

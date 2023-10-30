@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript-04</title>
+</head>
+<body>
+
+
+  Variables , i enjoy creating variables.
+  we have var(old-fashion) , let(allows you to reassign another value to a variable) and const(does not allow you to reassign another value to a variable.)
+  Check your note for the syntax rules in namng variables.
+  you know about camelCase right?
+  do you know we also have PascalCase
+  do you know we also have kebab-case
+  we also have snake_case
+  Let us create a simple cart page
+
+  Shortcuts in using variables with sigms and numbers
+    cartquantity + 2 = cartquantity rewritten as cartquantity += 2
+    cartquantity - 2 = cartquantity rewritten as cartquantity -= 2
+    cartquantity * 2 = cartquantity rewritten as cartquantity *= 2
+    cartquantity / 2 = cartquantity rewritten as cartquantity /= 2
+    cartquantity + 1 = cartquantity rewritten as cartquantity ++
+    cartquantity - 1 = cartquantity rewritten as cartquantity --
+
+
+  <button onclick="console.log(`Total cart quantity is ${cartQuantity}`);">Show Quantity</button>
+  <button onclick="
+      cartQuantity = cartQuantity + 1;
+      console.log(`cartQuantity is ${cartQuantity}`);
+  ">Add to Cart</button>
+  <button onclick="
+      cartQuantity = cartQuantity + 2;
+      console.log(`cartQuantity is ${cartQuantity}`);     
+  ">+2</button>
+  <button onclick="
+      cartQuantity = cartQuantity + 3;
+      console.log(`cartQuantity is ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+  cartQuantity = cartQuantity - 1;
+  console.log(`cartQuantity is ${cartQuantity}`); 
+  ">-1</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log(`cartQuantity is ${cartQuantity}`); 
+    
+  ">Reset Cart</button>
+  <!--DONE CREATING A SIMPLE CART PAGE-->
+
+  <!--Challenge Exercises-->
+
+  <script>
+    let variable1 = "I am a girl"; //creating a variable
+    variable1 = "I am a lady, lol";//reassigning another value to the variable you created
+    //A simple cart page.
+    let cartQuantity = 0;
+    console.log(typeof 5);
+    console.log('my laptop is giving me issues');
+
+    //Challenge Exercises Solution
+  </script>
+
+
+</body>
+
+
+
+</html>
