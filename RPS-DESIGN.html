@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rps-design</title>
+  <style>
+    .rps-card{
+      display: grid;
+      place-items: center;
+      box-shadow: rgba(0,0,0,0.5);
+      margin: auto;
+    }
+    .rotating-image {
+    width: 200px;
+    height: 400px;
+    background: url('rock-paper-scissors-removebg-preview.png'); /* Replace 'your-image.jpg' with your image file */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 20px;;
+/*   
+    animation: rotate 0.5s linear infinite; Apply the rotation animation my preloader animation */
+    
+    animation: rotate 4s linear infinite; /* Apply the rotation animation my preloader animation */
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Start with no rotation (0 degrees) */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate 360 degrees (one full rotation) */
+    }
+  }
+ 
+  </style>
+</head>
+<body>
+  <div class="rps-card">
+    
+<div class="rotating-image"></div>
+  </div>
+</body>
+</html>
+
+

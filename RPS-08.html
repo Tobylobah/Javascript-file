@@ -21,17 +21,23 @@
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
+      //to remove an item from localStorage 
       localStorage.removeItem('score');
     ">Reset Score</button>
 
     <script>
-      let score = JSON.parse(localStorage.getItem('score')) || {
-        wins: 0,
-        losses: 0,
-        ties: 0
-      };
+      /* score object
+      const score = {
+        wins:0,
+        losses:0,
+        ties:0
+      }
+      */
 
-      /*
+      // to get the score we saved in localStorage we use .getItem, and we call on the name , in this case score , remember that we have converted our score value to a string so we have to convert it back to an object using JSON.parse(); 
+      let score = JSON.parse(localStorage.getItem('score')); 
+  
+      //this code will run in the reset button because we have removed the item score.
       if (!score) {
         score = {
           wins: 0,
@@ -39,7 +45,7 @@
           ties: 0
         };
       }
-      */
+    
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -49,7 +55,7 @@
         if (playerMove === 'scissors') {
           if (computerMove === 'rock') {
             result = 'You lose.';
-          } else if (computerMove === 'paper') {
+          } else if (computerMove === 'paper') { 
             result = 'You win.';
           } else if (computerMove === 'scissors') {
             result = 'Tie.';
@@ -81,6 +87,9 @@
         } else if (result === 'Tie.') {
           score.ties += 1;
         }
+
+        // we are making use of localStorage to update our score in cases where we we refresh our page. It works like variables , we use it to store values permanently.It only accepts two string as its input , one for score , the other for the value.
+        //We made use of JSON.stringify to convert our object "score" that we created earlier to string so it can be used with localStorage.
 
         localStorage.setItem('score', JSON.stringify(score));
 

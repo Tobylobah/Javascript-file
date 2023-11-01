@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docum</title>
+</head>
+<body>
+  <script>
+  //6a , 6b && 6c 
+    const hour = 18;
+    const name = 'Toby';
+
+    if(hour >= 6 && hour <= 12){
+      console.log(`Good morning! ${name}`);
+    }
+    else if(hour >= 13 && hour <= 17){
+      console.log(`Good afternoon! ${name}`);
+    }
+    else{
+      console.log(`Goodnight! ${name}`);
+    }
+    //6d && 6e
+    const age = 17
+    const isHoliday = true;
+    if((age<= 6 || age>= 65) && !isHoliday){
+      console.log('discount')
+    }
+    else{
+      console.log('no discount')
+    }
+    //6f a coin flip game
+    let randomNumber = Math.random();
+        let result  = '';
+        if(randomNumber < 0.5){
+          result = 'heads';
+        }
+        else{
+        result = 'tails';
+        }
+        let guess = 'heads';
+        if(result === guess){
+          console.log('You win')
+        }
+        else if(result === 'tails'){
+          console.log('You lose')
+
+        }
+
+
+
+
+  </script>
+</body>
+</html>

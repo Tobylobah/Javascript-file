@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <!-- DOM combines both html and javascript together -->
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+
+    <script>
+      // it selects the button tag and changes the text inside using querySelector to Changed.
+      document.querySelector('button').innerHTML = 'Changed.';
+        console.log(document.querySelector('button').innerHTML);
+
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+      
+      //it changes the title to DOM-practice
+      document.title = 'DOM-practice';
+      console.log(document.title);
+      
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      // it replaces everything in the body with <button>Good job!</button>
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = '<button>Good job!</button>';
+      
+    </script>
+  </body>
+</html>

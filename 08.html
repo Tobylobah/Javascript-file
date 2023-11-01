@@ -1,0 +1,89 @@
+<!Doctype html>
+<head>
+  <title>Objects , JSON and localStorage</title>
+</head>
+<body>
+  <script>
+    const object1 = {
+      //making use of dot notation
+      name:'Toby',
+      //making use of bracket notation
+      ['color-of-car']:'Blue',
+      //creating an object inside another object
+       payment: {
+       price:'negotiable',
+       taxFee:'nil'
+       },
+      //creating a function inside an object (method)
+      func:function function1(){
+      console.log("I'm creating a function");
+       }
+      }
+      
+    console.log(object1.name);
+    console.log(object1['color-of-car']);
+    console.log(object1.payment.price);
+    console.log(object1.func());
+    
+    //JSON and localStorage.
+    console.log(JSON.stringify(object1));//converts a javascript object to strings , and does not include the functions created inside the object.
+    console.log(JSON.parse(JSON.stringify(object1)));
+    //converts a JSON string back to a Javascript object.
+    
+    //localStorage , used for storing data permanently even after refreshing
+    localStorage.setItem('name' , 'Toby');
+  console.log(localStorage.getItem('name'));
+
+  //more details about objects 
+  // null intentionally wanting something to be empty
+  //auto-boxing: strings having properties and methods by autmatically wrapping strings in a special object. it also works with other types of values eg numbers , booleans , but it does not work with null and undefined. 
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    //Objects are refrences
+    const object1 = {
+      message:'hello',
+    };
+    const object2 = object1;
+    object1.message = 'Good job';
+    //they will both result to Good job 
+    console.log(object1);
+    console.log(object2);
+
+    const object3 ={
+      message:'Good job',
+    };
+    console.log(object1 === object2);//return true
+    console.log(object1 === object3);//return false they do not have the same refrence , they just have the same value.
+
+    //destructuring in objects
+    const object4 = {
+      message: 'Good job'
+    };
+    const message = object4.message;//here we have a variable message = object4.message(which is basically targeting the string Good job)
+    //when the variable name and the property name are the same we use this shortcut called destructuring
+    const{message} = object4;
+    //learn more about destructuring and shorthand properties in objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
