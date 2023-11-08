@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <p>Todo list</p>
+    <input class="js-name-input" type="text" placeholder="todo-name">
+
+    <button onclick="addTodo()">Add</button>
+
+  <script>
+    const todoList= [];//an empty array
+    
+    function addTodo(){
+
+      //it is targeting the input tag
+    const inputElement = document.querySelector('.js-name-input');
+
+    //it is taking the value inside the input tag and storing it inside the variable name
+    const name = inputElement.value;
+    console.log(name); 
+
+    //addding the input stored in the variable name to the empty array.
+    todoList.push(name);
+    console.log(todoList);
+
+    //reseting the input box to the default placeholder text after adding a todo.
+    inputElement.value = '';
+    }
+    </script>
+</body>
+</html>

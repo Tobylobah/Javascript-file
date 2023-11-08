@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-List version2.0</title>
+</head>
+<body>
+  <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // documentation sample for my team,todo,atomic habit,writeupon strings and booleaans i guess , ask debby about her technical writing stuffs for today 
+    //i want my todo to be able to hail me yknow saying teefah ma gee , what are you doing today, teefah ma gee , fill me up with ur tasks na , omo just 5 task pere, you sure you do not want to add more.
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <p>Todo list</p>
+    <input class="js-name-input" type="text" placeholder="todo-name">
+
+    <button onclick="addTodo();">Add</button>
+
+    <div class="js-todo-list">
+      
+    </div>
+
+  <script>
+    const todoList= ['make dinner' , 'wash dishes'];//already listed todo-list
+
+    renderTodoList();//calling the function renderTodoList , check the function for how this works.
+
+    function renderTodoList(){
+      let todoListHTML = ''; 
+
+    for(let i = 0; i < todoList.length ; i++){//for our index to be 0 , that is selecting the first sentence 'make dinner' , and the index is lesser than the todolist length , 0 lesser than 2 , then the increment step , 1 will be added to the index until the loop condition is not longer satisfied.
+      const todo = todoList[i];//selecting the index 0 and 1 i.e , wash dishes and make dinner
+      const html = `<p>
+                  
+                  ${todo}
+                  <button onclick="todoList.splice(${1 , 1} 1 );">Delete</button>
+                  
+                 </p>`;
+      todoListHTML += html;
+    }
+    console.log(todoListHTML);
+
+    document.querySelector('.js-todo-list').
+    innerHTML = todoListHTML;
+    }
+
+ 
+     function addTodo( ){
+
+      //it is targeting the input tag
+    const inputElement = document.querySelector('.js-name-input');
+
+    //it is taking the value inside the input tag and storing it inside the variable name
+    const name = inputElement.value;
+    console.log(name); 
+
+    //addding the input stored in the variable "name" to the empty array.
+    todoList.push(name);
+    console.log(todoList);
+
+    //reseting the input box to the default placeholder text after adding a todo name
+    inputElement.value = '';
+    
+   renderTodoList();
+    }
+
+    </script>
+</body>
+</html>

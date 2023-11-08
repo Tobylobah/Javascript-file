@@ -12,6 +12,100 @@
     console.log(myArray[0]);//in programming your index starts from 0
     myArray[0] = 99;//Changigng value inside an array.
 
+    //array can accept any type of value.
+    //strings,nuber,boolean,objects,array itself
+    //array is a special kind of object
+    ['string' , 1 ,false , {name:'cars'} , [1,2 ] ];
+    //to confirm if an array is truly an array
+    console.log(Array.isArray([1,2]));
+    //Array has useful properties and methods
+    console.log(myArray.length)//one useful property
+    myArray.push(100);//it will add a value to the end of the array //useful method
+    myArray.splice(0,1);//another useful method. the first value is the index we want to remove , the second value is the number of values to remove. 
+
+                                                // LOOPS  
+          //WHILE loops
+  let i = 1;//giving a declaration--loop variable
+  while(i <= 5)//the condition---loop condition
+  {
+    console.log(i);
+    i++; //increment step
+  } 
+  //each time we run a loop its called iteration, in this case it is 5 iteration
+
+  //loop creates a scope, any variable created inside the loop exists only inside the loop.
+
+  //this code will take 1 as the value of i , checks if i is <=5 , console.log the value of i , and adds 1 to its value then it goes back to the condition and repeats all the steps(looping) until the condition is no longer satisfied 
+  
+  //FOR loops
+
+  for(let i = 1; i <= 5; i++ ){
+    console.log(i);
+  }
+  //a shorter version of the while loop above.
+  
+  //a standard loop with all steps i.e there is a loop variable, loop condition , increment step , use for loop , if no  t use while loop
+
+  //Looping through an Array
+  const todoList = [
+     'make dinner',
+     'wash dishes', 
+     'watch youtube'
+    ];
+
+    for(let index = 0;//loop variable
+
+        index <= todoList.length - 1; // loop condition (0 is lesser than or equal to 3-1)
+
+        index++ //increment step
+    ){
+      const value = todoList[index];
+      console.log(value);
+    }
+
+     //Shortcuts for Looping through an Array
+     for(let i = 0;//loop variable
+
+      i <= todoList.length - 1; // loop condition (0 is lesser than or equal to 3-1)
+
+      i++ //increment step
+      ){
+      const value = todoList[i];
+      console.log(value);
+}
+      //Acumulator Pattern'
+      const nums = [1, 1, 3];
+      let total = 0;
+
+      for(let i = 0; i < nums.length ; i++ ){
+      const num = nums[i];//accesing the index i
+      total = total + num;
+      }
+
+      console.log(total);
+
+      //Another examlple of Acumulator Pattern 
+      // double the given numbers in an array
+
+      const numsDoubled = [];
+
+      for(let i = 0; i < nums.length; i++){
+        const num = nums[i];
+        numsDoubled.push(num * 2);
+      }
+      console.log(numsDoubled);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
