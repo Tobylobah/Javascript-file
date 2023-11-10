@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced FUNCTIONS </title>
+</head>
+<body>
+
+  <script>
+    function greeting(){
+      console.log('hello');
+    }
+    greeting();
+    //functions are values just like number string and booleans , and they can be saved inisde a variable.
+    const function1 = function /*greeting*/(){/*anonymous function*/
+      console.log('hello2');
+    }
+    console.log(function1);
+    console.log(typeof function1);
+    function1();//variable running a function , with this case we can decide to have an anonymous function , a function with no name.
+
+
+    //hoisiting- not bothering about what order you used in writing a code, eg you can call a function before creating it. but it does not work when our function is saved in a variable
+
+    //we can save a value(function) in an object.
+    const object1 = {
+      num: 2 ,
+      fun: function greeting(){
+        console.log('hello')
+      }
+    };
+    object1.fun();//accesing the function
+
+    //we can pass a value into a function
+    function display(param){
+      console.log(param)
+    }
+    display(2);
+
+    //passing a function into a function , this is the weirdest code i have ever seen in my life
+    function run(param){
+      param();
+    }
+    run(function(){
+      console.log('hello4');
+    });
+//end of the weirdest code
+//setTimeout allows us to run a function in  the future , it takes two parameter , one is the function we want to run in the future , the second parameter is how long to wait before running the function. and it is in millisecond , 1000ms = 1s
+setTimeout(function(){
+  console.log('timeout');
+} , 3000);
+
+//Asynchronous code -- not waiting for a line to finish before going to the next line. so next-line will display first and after 3s timeout will display too
+console.log('next-line');  
+
+
+
+//Synchronous code  will wait for one line to finish before going to the next line. 
+
+//setInterval , another built in function , takes the same two parameters as setTimeout 
+setInterval(function(){
+  console.log('interval');
+} , 3000);
+// in this case interval will be displayed every 3 seconds. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

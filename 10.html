@@ -95,6 +95,61 @@
       }
       console.log(numsDoubled);
 
+      //arrays are refrences  
+      const array1 = [1,2,3];
+      const array2 = array1;
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+      //both will display 1,2,3,4 because refrencing is taking place.
+
+      const array3 = [1,2,3,4];
+      const array4 = array3.slice();//this is making a copy of array 3
+      array4.push(4);
+      console.log(array3);//result is 1,2,3
+      console.log(array4);//result is 1,2,3,4
+
+      //Destructuring  shortcut forn array
+      const array5 = [1 , 2, 3];
+      //to get the values out of this array we can:
+      // const firstValue = array5[0];//gets 1
+      // const secondValue = array5[1];//gets 2
+//orrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+      const [firstValue , secondValue] = [1,2,3]
+
+      //more details about loop , break and continue
+      //breaks allows us to exit a loop early
+      //continue lets us skip one iteration of the loop.
+      for(let i =1; i <= 10; i++){
+        // if(1 === 3){
+        //   continue;//it skips three
+        // }
+        if(i % 3 === 0){
+          continue;//it will skip both 3 and 6 because they are both divisible by 3.
+        }
+        console.log(i);
+        if(i === 8){
+          break; //the loop stops at 8
+        }
+      } 
+
+      //loops with functions
+      function doubleArray(nums){
+      const numsDoubled = [];
+
+      for(let i = 0; i < nums.length; i++){
+        const num = nums[i];
+        numsDoubled.push(num * 2);
+      }
+      console.log(numsDoubled);
+      }
+      doubleArray([1 , 1 , 3]);//the numbers will be doubled
+      doubleArray([4,6,8]);//the numbers will be doubled
+
+
+
+
+
 
 
 
